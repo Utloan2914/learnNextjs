@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import AppBar from '@mui/material/AppBar';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+import Button from '@mui/material/Button';
+import Link from 'next/link';
+import React from 'react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,12 +17,41 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  console.log("RootLayout rendered");
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+      </head>
+      <body>
+        <div>
+          <AppBar position="static">
+            <Toolbar>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                App Title
+              </Typography>
+              <Link href="../auth/signin" passHref>
+                <Button color="inherit">Sign In</Button>
+              </Link>
+              <Link href="../auth/signup" passHref>
+                <Button color="inherit">Sign Up</Button>
+              </Link>
+            </Toolbar>
+          </AppBar>
+          <main>
+            {children}
+          </main>
+        </div>
+      </body>
     </html>
   );
 }

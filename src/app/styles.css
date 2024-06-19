@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+  }
+  
+  .container {
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #333;
+    font-size: xx-large;
+  }
+  
+  .error {
+    color: red;
+    text-align: center;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+    margin-bottom: 20px;
+  }
+  
+  .form-group input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+    transition: background 0.3s;
+  }
+  
+  .btn.add {
+    background-color: #28a745;
+  }
+  
+  .btn.add:hover {
+    background-color: #218838;
+  }
+  
+  .btn.update {
+    background-color: #007bff;
+    
+  }
+  
+  .btn.update:hover {
+    background-color: #0056b3;
+  }
+  
+  .btn.delete {
+    background-color: #dc3545;
+  }
+  
+  .btn.delete:hover {
+    background-color: #c82333;
+  }
+  
+  .btn.cancel {
+    background-color: #6c757d;
+  }
+  
+  .btn.cancel:hover {
+    background-color: #5a6268;
+  }
+  
+  .product-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .product-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+  }
+  
+  .product-details {
+    flex: 1;
+  }
+  
+  .product-details h3 {
+    margin: 0;
+    color: #333;
+  }
+  
+  .product-details p {
+    margin: 5px 0;
+    color: #666;
+  }
+  
+  .product-details button {
+    margin-right: 10px;
+  }
+  
+  .product-details button:last-child {
+    margin-right: 0;
+  }
+  
+  .update-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.95); 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    z-index: 1;
+    transition: background-color 0.3s ease; 
+  }
+  
+  .update-form.active {
+    display: flex;
+    background-color: #ed4141;
+    width:40%;
+  }
+  
+  .update-form input {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+  }
+  
+  .update-form button {
+    padding: 8px 12px;
+    margin-top: 5px;
+    border-radius: 5px;
+  }
+  
